@@ -11,52 +11,73 @@
 
         private static float GetGenderMultiplier(Gender gender)
         {
+            float factor;
+
             switch (gender)
             {
                 case Gender.Female:
-                    return 0.01f;
+                    factor = 0.01f;
+                    break;
                 case Gender.Male:
                 default:
-                    return 0.02f;
+                    factor = 0.02f;
+                    break;
             }
+
+            return factor;
         }
 
         private static float GetAgeMultiplier(AgeGroup ageGroup)
         {
+            float factor;
+
             switch (ageGroup)
             {
                 case AgeGroup.LessThanTwenty:
-                    return 0.01f;
+                    factor = 0.01f;
+                    break;
                 case AgeGroup.TwentyOneToForty:
-                    return 0.03f;
+                    factor = 0.03f;
+                    break;
                 case AgeGroup.FortyOneToSixty:
-                    return 0.05f;
+                    factor = 0.05f;
+                    break;
                 case AgeGroup.AboveSixty:
                 default:
-                    return 0.08f;
+                    factor = 0.08f;
+                    break;
             }
+
+            return factor;
         }
 
         private static float GetProvinceMultiplier(Province province)
         {
+            float factor;
+
             switch (province)
             {
                 case Province.Central:
                 case Province.Western:
                 case Province.Southern:
-                    return 0.01f;
+                    factor = 0.01f;
+                    break;
 
                 case Province.Sabaragamuwa:
                 case Province.Uva:
                 case Province.NorthCentral:
                 case Province.NorthWestern:
-                    return 0.02f;
+                    factor = 0.02f;
+                    break;
 
                 case Province.Eastern:
                 case Province.Northern:
                 default:
-                    return 0.03f;
+                    factor = 0.03f;
+                    break;
             }
+
+            return factor;
         }
     }
 }
