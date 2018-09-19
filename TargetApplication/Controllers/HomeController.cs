@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using TargetApplication.Models;
+using TargetLibrary;
 
 namespace TargetApplication.Controllers
 {
@@ -15,22 +17,12 @@ namespace TargetApplication.Controllers
             return View();
         }
 
-        public IActionResult About()
+        [HttpPost]
+        public IActionResult Result(InsuranceRiskInformation riskInformation)
         {
-            ViewData["Message"] = "Your application description page.";
+            float riskFactor = CalculateInsuranceRiskFactor.GetRiskFactor(riskInformation);
+            ViewBag.RiskFactor = riskFactor.ToString(CultureInfo.InvariantCulture);
 
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
             return View();
         }
 
