@@ -2,78 +2,78 @@
 {
     public class CalculateInsuranceRiskFactor
     {
-        public static float GetRiskFactor(InsuranceRiskInformation riskInformation)
+        public decimal GetRiskFactor(InsuranceRiskInformation riskInformation)
         {
             return GetGenderMultiplier(riskInformation.Gender)
                    + GetAgeMultiplier(riskInformation.AgeGroup)
                    + GetProvinceMultiplier(riskInformation.Province);
         }
 
-        private static float GetGenderMultiplier(Gender gender)
+        private decimal GetGenderMultiplier(Gender gender)
         {
-            float factor;
+            decimal factor;
 
             switch (gender)
             {
-                case Gender.Female:
-                    factor = 0.01f;
-                    break;
                 case Gender.Male:
+                    factor = 0.01m;
+                    break;
+                case Gender.Female:
                 default:
-                    factor = 0.02f;
+                    factor = 0.02m;
                     break;
             }
 
             return factor;
         }
 
-        private static float GetAgeMultiplier(AgeGroup ageGroup)
+        private decimal GetAgeMultiplier(AgeGroup ageGroup)
         {
-            float factor;
+            decimal factor;
 
             switch (ageGroup)
             {
                 case AgeGroup.LessThanTwenty:
-                    factor = 0.01f;
+                    factor = 0.01m;
                     break;
                 case AgeGroup.TwentyOneToForty:
-                    factor = 0.03f;
+                    factor = 0.03m;
                     break;
                 case AgeGroup.FortyOneToSixty:
-                    factor = 0.05f;
+                    factor = 0.05m;
                     break;
                 case AgeGroup.AboveSixty:
                 default:
-                    factor = 0.08f;
+                    factor = 0.08m;
                     break;
             }
 
             return factor;
         }
 
-        private static float GetProvinceMultiplier(Province province)
+        private decimal GetProvinceMultiplier(Province province)
         {
-            float factor;
+            decimal factor;
 
             switch (province)
             {
                 case Province.Central:
                 case Province.Western:
                 case Province.Southern:
-                    factor = 0.01f;
+                    factor = 0.01m;
                     break;
 
                 case Province.Sabaragamuwa:
                 case Province.Uva:
                 case Province.NorthCentral:
                 case Province.NorthWestern:
-                    factor = 0.02f;
+                    factor = 0.02m;
                     break;
 
                 case Province.Eastern:
                 case Province.Northern:
                 default:
-                    factor = 0.03f;
+                    factor = 0.03m;
                     break;
             }
 

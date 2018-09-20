@@ -20,7 +20,7 @@ namespace TargetApplication.Controllers
         [HttpPost]
         public IActionResult Result(InsuranceRiskInformation riskInformation)
         {
-            float riskFactor = CalculateInsuranceRiskFactor.GetRiskFactor(riskInformation);
+            decimal riskFactor = new CalculateInsuranceRiskFactor().GetRiskFactor(riskInformation);
             ViewBag.RiskFactor = riskFactor.ToString(CultureInfo.InvariantCulture);
 
             return View();

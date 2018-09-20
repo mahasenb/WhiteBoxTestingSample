@@ -30,8 +30,9 @@ namespace TargetApplication.Tests
         [TestMethod]
         public void Scenario_Male_UnderTwenty_Western()
         {
-            float expected = 0.04f;
-            float actual = target.CalculateWith(Gender.Male, AgeGroup.LessThanTwenty, Province.Western);
+            // 0.01 + 0.01 + 0.01
+            decimal expected = 0.03m;
+            decimal actual = target.CalculateWith(Gender.Male, AgeGroup.LessThanTwenty, Province.Western);
 
             Assert.AreEqual(expected, actual);
         }
@@ -39,8 +40,9 @@ namespace TargetApplication.Tests
         [TestMethod]
         public void Scenario_Male_UnderForty_Uva()
         {
-            float expected = 0.06999999f;
-            float actual = target.CalculateWith(Gender.Male, AgeGroup.TwentyOneToForty, Province.Uva);
+            // 0.01 + 0.03 + 0.02
+            decimal expected = 0.06m;
+            decimal actual = target.CalculateWith(Gender.Male, AgeGroup.TwentyOneToForty, Province.Uva);
 
             Assert.AreEqual(expected, actual);
         }
@@ -48,8 +50,9 @@ namespace TargetApplication.Tests
         [TestMethod]
         public void Scenario_Female_UnderSixty_Northern()
         {
-            float expected = 0.09f;
-            float actual = target.CalculateWith(Gender.Female, AgeGroup.FortyOneToSixty, Province.Northern);
+            // 0.02 + 0.05 + 0.03
+            decimal expected = 0.1m;
+            decimal actual = target.CalculateWith(Gender.Female, AgeGroup.FortyOneToSixty, Province.Northern);
 
             Assert.AreEqual(expected, actual);
         }
@@ -57,8 +60,9 @@ namespace TargetApplication.Tests
         [TestMethod]
         public void Scenario_Female_OverSixty_Central()
         {
-            float expected = 0.09999999f;
-            float actual = target.CalculateWith(Gender.Female, AgeGroup.AboveSixty, Province.Central);
+            // 0.02 + 0.08 + 0.01
+            decimal expected = 0.11m;
+            decimal actual = target.CalculateWith(Gender.Female, AgeGroup.AboveSixty, Province.Central);
 
             Assert.AreEqual(expected, actual);
         }

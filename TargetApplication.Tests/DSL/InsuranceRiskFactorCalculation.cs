@@ -21,12 +21,12 @@ namespace TargetApplication.Tests.DSL
 
         private IndexPageWrapper indexPage;
 
-        internal float CalculateWith(Gender gender, AgeGroup ageGroup, Province province)
+        internal decimal CalculateWith(Gender gender, AgeGroup ageGroup, Province province)
         {
             SubmitValuesInIndexPage(gender, ageGroup, province);
             remoteWebDriver.WaitUntilElementIsPresent(By.Id(ResultTextIdentifier));
 
-            return float.Parse(remoteWebDriver.FindElementById(ResultTextIdentifier).Text);
+            return decimal.Parse(remoteWebDriver.FindElementById(ResultTextIdentifier).Text);
         }
 
         private void SubmitValuesInIndexPage(Gender gender, AgeGroup ageGroup, Province province)
