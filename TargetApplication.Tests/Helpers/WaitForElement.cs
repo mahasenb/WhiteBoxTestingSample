@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using OpenQA.Selenium;
 using System.Threading;
-using OpenQA.Selenium;
 
 namespace TargetApplication.Tests.Helpers
 {

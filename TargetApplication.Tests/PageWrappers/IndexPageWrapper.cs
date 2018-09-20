@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Text;
-using OpenQA.Selenium.Remote;
-using OpenQA.Selenium.Support.UI;
+﻿using OpenQA.Selenium.Remote;
 using TargetLibrary;
 
 namespace TargetApplication.Tests.PageWrappers

@@ -1,9 +1,7 @@
-using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Remote;
 using TargetApplication.Tests.DSL;
-using TargetApplication.Tests.PageWrappers;
 using TargetLibrary;
 
 namespace TargetApplication.Tests
