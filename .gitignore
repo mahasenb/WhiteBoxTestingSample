@@ -259,20 +259,4 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
-/GeneratedReports/CoverageReport.xml
-/GeneratedReports/Output/combined.js
-/GeneratedReports/Output/index.htm
-/GeneratedReports/Output/TargetApplication.Views_Views__ViewImports.htm
-/GeneratedReports/Output/TargetApplication.Views_Views__ViewStart.htm
-/GeneratedReports/Output/TargetApplication.Views_Views_Home_Index.htm
-/GeneratedReports/Output/TargetApplication.Views_Views_Home_Result.htm
-/GeneratedReports/Output/TargetApplication.Views_Views_Shared__CookieConsentPartial.htm
-/GeneratedReports/Output/TargetApplication.Views_Views_Shared__Layout.htm
-/GeneratedReports/Output/TargetApplication.Views_Views_Shared__ValidationScriptsPartial.htm
-/GeneratedReports/Output/TargetApplication.Views_Views_Shared_Error.htm
-/GeneratedReports/Output/TargetApplication_ErrorViewModel.htm
-/GeneratedReports/Output/TargetApplication_HomeController.htm
-/GeneratedReports/Output/TargetApplication_Program.htm
-/GeneratedReports/Output/TargetApplication_Startup.htm
-/GeneratedReports/Output/TargetLibrary_CalculateInsuranceRiskFactor.htm
-/GeneratedReports/Output/TargetLibrary_InsuranceRiskInformation.htm
+/GeneratedReports
